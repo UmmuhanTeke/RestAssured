@@ -157,16 +157,16 @@ public class _09_CountryTest {
     }
 
     @Test(dependsOnMethods = "deleteCountry")
-    public void deleteCountryNegative() {
-        given()
-                .spec(reqSpec)
+        public void deleteCountryNegative() {
+            given()
+                    .spec(reqSpec)
 
-                .when()
-                .delete("/school-service/api/countries/"+countryID)
+                    .when()
+                    .delete("/school-service/api/countries/"+countryID)
 
-                .then()
-                .log().body()
-                .statusCode(400)
-                .body("message", containsStringIgnoringCase("Country not found"));
-    }
+                    .then()
+                    .log().body()
+                    .statusCode(400)
+                    .body("message", containsStringIgnoringCase("Country not found"));
+        }
 }
