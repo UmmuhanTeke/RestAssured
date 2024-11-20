@@ -1,0 +1,48 @@
+Location adres= data yı nesneye dönüştürüp
+
+adres.postCode
+adres.country
+adres.places.get(0).state
+
+
+Backend(API) yazan, NESNE -> Json gönderiyor
+FrontEnd(UI) yazan, Json -> NESNE
+
+Çevrilmiş olan bu Nesne ye
+POJO -> Json Nesne si
+
+//BU KÜTÜPHANE EKLENDİ
+
+<dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.14.1</version>
+        </dependency>
+
+
+ 1- Önce kalıbı hazırladım
+           Location ve Place
+           tip (Class) hazırladım
+
+  2- Testi yazdım
+
+  3- Kütüphaneyi ekledim
+           pom.xml
+
+   4- Json property leri
+           SET lere ekledim
+
+        {
+            "post code": "90210",
+            "country": "United States",
+            "country abbreviation": "US",
+            "places": [
+                {
+                    "place name": "Beverly Hills",
+                    "longitude": "-118.4065",
+                    "state": "California",
+                    "state abbreviation": "CA",
+                    "latitude": "34.0901"
+                }
+            ]
+        }
